@@ -6,7 +6,7 @@
 /*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:06:36 by arthur            #+#    #+#             */
-/*   Updated: 2021/11/21 16:16:56 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 19:36:44 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ t_num	*ft_rotate(t_num *str, int start, int end)
 t_num	*ft_rotate_a(t_num *str, size_t size)
 {
 	size_t		b_start;
-	int			i;
 
-	i = 0;
 	b_start = size / 2;
 	str = ft_rotate(str, 0, b_start);
 	return (str);
@@ -50,9 +48,7 @@ t_num	*ft_rotate_a(t_num *str, size_t size)
 t_num	*ft_rotate_b(t_num *str, size_t size)
 {
 	size_t		b_start;
-	int			i;
 
-	i = 0;
 	b_start = size / 2;
 	str = ft_rotate(str, b_start, size);
 	return (str);
@@ -61,9 +57,7 @@ t_num	*ft_rotate_b(t_num *str, size_t size)
 t_num	*ft_rotate_r(t_num *str, size_t size)
 {
 	size_t		b_start;
-	int			i;
 
-	i = 0;
 	b_start = size / 2;
 	str = ft_rotate_a(str, size);
 	str = ft_rotate_b(str, size);

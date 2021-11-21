@@ -6,7 +6,7 @@
 /*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:41:11 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 17:09:11 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 19:35:43 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,7 @@ t_num	*ft_parse_init(int argc, char **argv, int *size)
 t_num	*ft_parse_arg(int argc, char **argv, int *size, t_num *ret)
 {
 	char	**buff;
-	int		i;
 
-	i = 0;
 	if (*size != -1)
 		buff = (char **)malloc(sizeof(char *) * (*size + 1));
 	else

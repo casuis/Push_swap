@@ -6,7 +6,7 @@
 /*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:29:26 by arthur            #+#    #+#             */
-/*   Updated: 2021/11/21 18:44:04 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 19:34:52 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,7 @@ int	main(int argc, char **argv)
 {
 	char	*ret;
 	char	*buff;
-	int		i;
-	int		size;
 
-	i = 0;
-	size = (argc - 1) * 2;
 	buff = "Error";
 	ret = ft_push_swap(argv, argc);
 	ft_putstr(ret);

@@ -6,7 +6,7 @@
 /*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 23:04:19 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 18:25:11 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 19:35:16 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ int	ft_first_error(char **argv)
 	{
 		if (!(ft_isdigit(argv[1][i])) && argv[1][i + 1] == 0)
 			return (1);
-		if (!(ft_isdigit(argv[1][i])) &&
-			((argv[1][i] == ' ' && !(ft_isdigit(argv[1][i + 1])
+		if (!(ft_isdigit(argv[1][i]))
+			&& ((argv[1][i] == ' ' && !(ft_isdigit(argv[1][i + 1])
 			|| argv[1][i + 1] == '-'))))
 			return (1);
 		if (argv[1][i] == '-' && !(ft_isdigit(argv[1][i +1])))
 			return (1);
 		if (argv[1][i] == '\n')
 			return (1);
-			i++;
+		i++;
 	}
 	return (0);
 }

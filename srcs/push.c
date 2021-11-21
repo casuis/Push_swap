@@ -6,7 +6,7 @@
 /*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:04:19 by arthur            #+#    #+#             */
-/*   Updated: 2021/11/21 16:18:09 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 19:36:12 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ t_num	*ft_push(t_num *str, t_num nw, int stop, int start)
 t_num	*ft_delete(t_num *str, int pos, int stop)
 {
 	int		i;
-	t_num	buff;
 
 	i = pos;
-	buff = str[i];
 	while (i < stop)
 	{
 		str[i] = str[i + 1];
