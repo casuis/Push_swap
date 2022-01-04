@@ -6,7 +6,7 @@
 /*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 23:04:19 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 19:35:16 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 20:23:09 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ t_num	*ft_check_max(char **buff, size_t size, t_num *tab, int argc)
 	{
 		if (ft_atoi(buff[i]) > 2147483647)
 			return (NULL);
-		i++;
+	i++;
 	}
 	return (tab);
 }

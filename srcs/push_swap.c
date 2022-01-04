@@ -6,7 +6,7 @@
 /*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:29:26 by arthur            #+#    #+#             */
-/*   Updated: 2021/11/21 19:34:52 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 20:25:35 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ char	*ft_push_swap(char **argv, int argc)
 	if (ft_parse_core(argc, &size) == 0)
 		return (NULL);
 	if (ft_core_error(argv, argc))
-		return ("Error");
+		return ("Error\n");
 	tab = ft_parse_init(argc, argv, &size);
-	if (tab == NULL || ft_doublon_error(tab, size))
+	if (tab == NULL)
+		return ("Error\n");
+	if (ft_doublon_error(tab, size))
 	{
 		ft_free_tab(tab, size);
-		return ("Error");
+		return ("Error\n");
 	}
 	ret = ft_create("", 1);
 	if (size / 2 > 5)
@@ -53,7 +55,7 @@ int	main(int argc, char **argv)
 	char	*ret;
 	char	*buff;
 
-	buff = "Error";
+	buff = "Error\n";
 	ret = ft_push_swap(argv, argc);
 	ft_putstr(ret);
 	if (ret != NULL && ret != buff)

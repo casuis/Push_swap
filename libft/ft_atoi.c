@@ -6,18 +6,18 @@
 /*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 22:53:47 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/16 15:22:02 by asimon           ###   ########.fr       */
+/*   Updated: 2021/11/21 20:00:20 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "../incl/push_swap.h"
 
-long long int			ft_atoi(const char *str)
+long long int	ft_atoi(const char *str)
 {
 	int				i;
 	int				neg;
-	long long int		ret;
+	long long int	ret;
 
 	ret = 0;
 	neg = 1;

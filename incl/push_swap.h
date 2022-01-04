@@ -6,7 +6,7 @@
 /*   By: arthur <asimon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 17:55:31 by arthur            #+#    #+#             */
-/*   Updated: 2021/11/21 17:13:56 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 20:18:47 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ int		ft_parse_core(int argc, int *size);
 t_num	*ft_core(t_num *tab, size_t size, char **str);
 t_num	*ft_core_little(t_num *tab, size_t size, char **ret);
 int		ft_test(t_num *tab, size_t size);
+t_num	*ft_free_max(t_num *tab);
 
 #endif

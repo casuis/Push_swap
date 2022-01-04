@@ -6,7 +6,7 @@
 /*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:45:43 by arthur            #+#    #+#             */
-/*   Updated: 2021/11/21 16:47:04 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 20:25:06 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,11 @@ t_num	*ft_rollback(t_num *tab, char **str, size_t size)
 		*str = ft_strconc(*str, "pa\n");
 	}
 	return (tab);
+}
+
+t_num	*ft_free_max(t_num *tab)
+{
+	free(tab);
+	tab = NULL;
+	return (NULL);
 }

@@ -6,46 +6,16 @@
 #    By: asimon <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/14 10:26:36 by asimon            #+#    #+#              #
-#    Updated: 2021/11/21 19:39:10 by arthur           ###   ########.fr        #
+#    Updated: 2021/11/21 20:01:01 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= 	libft.a
 
 FILES_C		= 	ft_atoi.c			\
-				ft_bzero.c			\
-				ft_isalnum.c		\
-				ft_isalpha.c		\
-				ft_isascii.c		\
 				ft_isdigit.c		\
-				ft_isprint.c		\
-				ft_memccpy.c		\
-				ft_memchr.c			\
-				ft_memcmp.c			\
-				ft_memcpy.c			\
-				ft_memmove.c		\
-				ft_memset.c			\
-				ft_strchr.c			\
-				ft_strlcat.c		\
-				ft_strlcpy.c		\
 				ft_strlen.c			\
-				ft_strncmp.c		\
-				ft_strnstr.c		\
-				ft_strrchr.c		\
-				ft_tolower.c		\
-				ft_toupper.c		\
-				ft_strdup.c			\
-				ft_substr.c			\
-				ft_strjoin.c		\
-				ft_strtrim.c		\
-				ft_split.c			\
 				ft_itoa.c			\
-				ft_strmapi.c		\
-				ft_putchar_fd.c		\
-				ft_putstr_fd.c		\
-				ft_putendl_fd.c		\
-				ft_putnbr_fd.c		\
-				ft_calloc.c			\
 
 
 DIR_C		=	./

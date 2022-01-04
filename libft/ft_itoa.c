@@ -6,15 +6,15 @@
 /*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 18:50:26 by asimon            #+#    #+#             */
-/*   Updated: 2020/01/14 10:52:54 by asimon           ###   ########.fr       */
+/*   Updated: 2021/11/21 19:59:53 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			*ft_count(int nb, int *size)
+static char	*ft_count(int nb, int *size)
 {
-	char		*ret;
+	char	*ret;
 
 	*size = 1;
 	if (nb < 0 && nb != -2147483648)
@@ -25,8 +25,7 @@ static char			*ft_count(int nb, int *size)
 	else if (nb == -2147483648)
 	{
 		*size = 11;
-		if (!(ret = (char*)malloc(sizeof(char) * (*size + 1))))
-			return (NULL);
+		ret = (char *)malloc(sizeof(char) * (*size + 1));
 		return (ret);
 	}
 	while (nb / 10 > 0)
@@ -34,12 +33,11 @@ static char			*ft_count(int nb, int *size)
 		nb /= 10;
 		*size += 1;
 	}
-	if (!(ret = (char*)malloc(sizeof(char) * (*size + 1))))
-		return (NULL);
+	ret = (char *)malloc(sizeof(char) * (*size + 1));
 	return (ret);
 }
 
-static char			*ft_insert(char *ret, int neg, int size, int n)
+static char	*ft_insert(char *ret, int neg, int size, int n)
 {
 	while ((size > 0 && neg == 0) || (size > 1 && neg == 1))
 	{
@@ -53,15 +51,16 @@ static char			*ft_insert(char *ret, int neg, int size, int n)
 	return (ret);
 }
 
-char				*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char		*ret;
-	int			neg;
-	int			size[2];
+	char	*ret;
+	int		neg;
+	int		size[2];
 
 	neg = 0;
 	size[0] = 0;
-	if (!(ret = ft_count(n, &size[0])))
+	ret = ft_count(n, &size[0]);
+	if (ret == NULL)
 		return (NULL);
 	size[1] = size[0];
 	if (n < 0 && n != -2147483648)

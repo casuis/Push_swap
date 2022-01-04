@@ -6,7 +6,7 @@
 /*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:41:11 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 19:35:43 by arthur           ###   ########.fr       */
+/*   Updated: 2021/11/21 20:18:14 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_num	*ft_parse_init(int argc, char **argv, int *size)
 		if (tab == NULL)
 			return (NULL);
 		if (ft_check_max(argv, *size, tab, argc) == NULL)
-			return (NULL);
+			return (ft_free_max(tab));
 		tab = ft_init(tab, argv, *size, argc);
 	}
 	else if (argc == 2)
@@ -53,6 +53,7 @@ t_num	*ft_parse_arg(int argc, char **argv, int *size, t_num *ret)
 	buff = ft_set_buff(buff, argv[1]);
 	if (ft_check_max(buff, *size, ret, argc) == NULL)
 	{
+		free(ret);
 		ft_free_buff(buff, *size);
 		return (NULL);
 	}
