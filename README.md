@@ -1,4 +1,6 @@
 # push_swap
+[![asimon's 42Project Score](https://badge42.herokuapp.com/api/project/asimon/push_swap)](https://github.com/JaeSeoKim/badge42)
+
 _This is my Push_swap project for 42 school_
 
 ## CAREFULL
