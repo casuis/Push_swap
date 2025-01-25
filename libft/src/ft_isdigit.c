@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:02:25 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 19:54:55 by arthur           ###   ########.fr       */
+/*   Updated: 2025/01/25 19:20:06 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
+/**
+ * @brief Check if a char is a digit
+ * 
+ * @param c 
+ * @return int 
+ */
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)

@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:41:11 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 20:18:14 by arthur           ###   ########.fr       */
+/*   Updated: 2025/01/25 20:56:10 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
+/**
+ * @brief Define how to parse data if a single string is given or multiple one
+ * 
+ * @param argc 
+ * @param argv 
+ * @param size 
+ * @return t_num* 
+ */
 t_num	*ft_parse_init(int argc, char **argv, int *size)
 {
 	t_num	*tab;
@@ -29,10 +37,9 @@ t_num	*ft_parse_init(int argc, char **argv, int *size)
 	{
 		*size = ft_count_arg(argv[1]);
 		*size *= 2;
-		if (*size != -1)
-			tab = (t_num *)malloc(sizeof(t_num) * (*size + 1));
-		else
+		if (*size == ERROR)
 			return (NULL);
+		tab = (t_num *)malloc(sizeof(t_num) * (*size + 1));
 		tab = ft_parse_arg(argc, argv, size, tab);
 	}
 	else
@@ -40,16 +47,22 @@ t_num	*ft_parse_init(int argc, char **argv, int *size)
 	return (tab);
 }
 
+/**
+ * @brief Parsing of a single string with possible multiple arguments 
+ * 
+ * @param argc 
+ * @param argv 
+ * @param size 
+ * @param ret 
+ * @return t_num* 
+ */
 t_num	*ft_parse_arg(int argc, char **argv, int *size, t_num *ret)
 {
 	char	**buff;
 
-	if (*size != -1)
-		buff = (char **)malloc(sizeof(char *) * (*size + 1));
-	else
-		buff = NULL;
-	if (buff == NULL)
+	if (*size == ERROR)
 		return (NULL);
+	buff = (char **)malloc(sizeof(char *) * (*size + 1));
 	buff = ft_set_buff(buff, argv[1]);
 	if (ft_check_max(buff, *size, ret, argc) == NULL)
 	{

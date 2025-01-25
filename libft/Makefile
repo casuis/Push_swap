@@ -3,34 +3,24 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: asimon <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/14 10:26:36 by asimon            #+#    #+#              #
-#    Updated: 2021/11/21 20:01:01 by arthur           ###   ########.fr        #
+#    Updated: 2025/01/25 19:19:06 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= 	libft.a
 
-FILES_C		= 	ft_atoi.c			\
-				ft_isdigit.c		\
-				ft_strlen.c			\
-				ft_itoa.c			\
-
-
-DIR_C		=	./
-
-SRCS		=	$(addprefix $(DIR_C), $(FILES_C))
-
-SRCS_BNS	=	$(addprefix $(DIR_C), $(BONUS_C))
-
 FILES_H		=	libft.h
 
-DIR_H		=	./
+SRCDIR		=	src
 
-HEADERS		= 	$(addprefix $(DIR_H), $(FILES_H))
+OBJDIR		=	obj
 
-OBJS		=	$(SRCS:.c=.o)
+SRCS		=	$(wildcard $(SRCDIR)/*.c)
+
+OBJS		=	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
 RM			=	rm -f
 
@@ -42,18 +32,19 @@ ARGUMENTS	=	-c
 
 
 $(NAME):	$(OBJS)
-		ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 all:		$(NAME)
 
-.c.o:
-		$(CC) $(FLAGS) $(ARGUMENTS) $< -o  $(<:.c=.o)
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@mkdir -p $(OBJDIR)
+	$(CC) $(FLAGS) $(ARGUMENTS) $< -o  $@
 
 clean:
-		$(RM) $(OBJS)
+	$(RM) $(OBJS)
 
 fclean:		clean
-		$(RM) $(NAME) $(OBJS_BNS)
+	$(RM) $(NAME) $(OBJS_BNS)
 
 re:			fclean all
 

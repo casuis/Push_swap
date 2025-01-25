@@ -3,16 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 22:53:47 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 20:00:20 by arthur           ###   ########.fr       */
+/*   Updated: 2025/01/25 20:54:41 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "../incl/push_swap.h"
+#include "../libft.h"
+#include "../../incl/push_swap.h"
 
+/**
+ * @brief Convert a string into a long long int
+ * 
+ * @param str 
+ * @return long long int 
+ */
 long long int	ft_atoi(const char *str)
 {
 	int				i;

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asimon <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 18:50:26 by asimon            #+#    #+#             */
-/*   Updated: 2021/11/21 19:59:53 by arthur           ###   ########.fr       */
+/*   Updated: 2025/01/25 19:20:11 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static char	*ft_count(int nb, int *size)
 {
@@ -51,6 +51,12 @@ static char	*ft_insert(char *ret, int neg, int size, int n)
 	return (ret);
 }
 
+/**
+ * @brief Convert an int to an array
+ * 
+ * @param n 
+ * @return char* 
+ */
 char	*ft_itoa(int n)
 {
 	char	*ret;

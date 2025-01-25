@@ -6,45 +6,33 @@
 #    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/21 03:58:58 by arthur            #+#    #+#              #
-#    Updated: 2021/11/21 17:42:50 by arthur           ###   ########.fr        #
+#    Updated: 2025/01/25 19:07:15 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
 
-SRCSDIR		=	srcs/
-
 LIBFTPATH	=	libft/
 
 LIBFTA		=	$(LIBFTPATH)libft.a
 
-SRCS		=	$(SRCSDIR)push_swap.c		\
-				$(SRCSDIR)init.c			\
-				$(SRCSDIR)core.c			\
-				$(SRCSDIR)core_little.c		\
-				$(SRCSDIR)bin_op.c			\
-				$(SRCSDIR)count.c			\
-				$(SRCSDIR)error.c			\
-				$(SRCSDIR)free.c			\
-				$(SRCSDIR)parse.c			\
-				$(SRCSDIR)push.c			\
-				$(SRCSDIR)reverse_rotate.c	\
-				$(SRCSDIR)rotate.c			\
-				$(SRCSDIR)set.c				\
-				$(SRCSDIR)swap.c			\
-				$(SRCSDIR)tools.c			\
-				$(SRCSDIR)tools_core.c		\
+SRCDIR		=	src
 
-OBJS		=	$(SRCS:.c=.o)
+OBJDIR		=	obj
+
+SRCS		=	$(wildcard $(SRCDIR)/*.c)
+
+OBJS		=	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
 CC			=	gcc
 
 CFLAGS		=	-Wall -Wextra -Werror
 
-.c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@mkdir -p $(OBJDIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(NAME)
+all: $(NAME) 
 
 lib:
 	make -C $(LIBFTPATH)
@@ -53,11 +41,11 @@ $(NAME): lib $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFTA) -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -rf $(OBJDIR)
 	make fclean -C $(LIBFTPATH)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 	make fclean -C $(LIBFTPATH)
 
 re: fclean all
