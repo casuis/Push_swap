@@ -21,6 +21,18 @@ You can now use it with a stack of number
 > [!NOTE]
 > You can see in [Ressource section](#Ressource) a link to create number stack
 
+Now just run the executable with your stack:
+```
+$> ./push_swap "0 1 -5 10 80 -100 33"
+```
+You can also pass every argument this way:
+```
+$> ./push_swap 0 10 -2 -10 90 100 42 -21
+```
+A checker as been provide by the 42 school that you can run by piping the output in it:
+```
+$> ./push_swap [your_stack] | [checker_linux or checker_Mac] [your_stack]
+```
 ## RESSOURCE <a name='#Ressource'></a>
 
 * [Radix sort explanation](https://medium.com/nerd-for-tech/putting-the-rad-in-radix-sort-d7c3be4fdbdf)
