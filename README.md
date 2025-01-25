@@ -4,7 +4,15 @@ _This is my push_swap project for 42 school_
 
 ## SUBJECT
 
-Creation of a sort algo with two stack and only some actions anaible: **p**ush **a**, **p**ush **b**, **r**otate **a**, **r**otate **b**, **r**everse **r**otate **a**, **r**everse **r**otate **b**...
+Creation of a sort algo with two stack and only some actions anaible:  
+* **p**ush **a**
+* **p**ush **b**
+* **r**otate **a**
+* **r**otate **b**
+* **r**everse **r**otate **a**
+* **r**everse **r**otate **b**
+* ...
+
 An error gestion must be set, the stack of number can't have duplicates.
 
 ### About this project
