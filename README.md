@@ -19,7 +19,7 @@ make
 An executable will be create name ```push_swap```.
 You can now use it with a stack of number
 > [!NOTE]
-> You can see in [Ressource section](#Ressource) a link to create number stack
+> You can see in [Ressource section](#ressource) a link to create number stack
 
 Now just run the executable with your stack:
 ```
@@ -33,7 +33,7 @@ A checker as been provide by the 42 school that you can run by piping the output
 ```
 $> ./push_swap [your_stack] | [checker_linux or checker_Mac] [your_stack]
 ```
-## RESSOURCE <a name="#Ressource"/>
+## RESSOURCE <a name="#ressource"/>
 
 * [Radix sort explanation](https://medium.com/nerd-for-tech/putting-the-rad-in-radix-sort-d7c3be4fdbdf)
 * [Stack generator](https://www.calculatorsoup.com/calculators/statistics/random-number-generator.php)
