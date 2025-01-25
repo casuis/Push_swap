@@ -33,7 +33,7 @@ A checker as been provide by the 42 school that you can run by piping the output
 ```
 $> ./push_swap [your_stack] | [checker_linux or checker_Mac] [your_stack]
 ```
-## RESSOURCE <a name='#Ressource'></a>
+## RESSOURCE <a name="#Ressource"/>
 
 * [Radix sort explanation](https://medium.com/nerd-for-tech/putting-the-rad-in-radix-sort-d7c3be4fdbdf)
 * [Stack generator](https://www.calculatorsoup.com/calculators/statistics/random-number-generator.php)
